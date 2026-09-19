@@ -1,0 +1,58 @@
+# Day 1: Variables
+Favorite_color = "Navy Blue"
+
+# Day 2: Data Types
+My_hobby = "Gym"
+hobby_cost = 1200
+
+# Day 3: Math
+Hobby_cost = 1200
+yearly_cost = Hobby_cost * 12
+
+# Day 4: User Input
+Favorite_food = input("What is your favorite food? ")
+
+# Day 5: If/Else Logic
+traffic_light = "red"
+
+if traffic_light == "red":
+    print("Stop!")
+else:
+    print("Go")
+
+# Day 6 & 7: Lists and Loops
+movies = ["Iron Man", "Spiderman", "Batman"]
+
+for movie in movies:
+    print(movie)
+
+Intermediate Error Handling (Python)
+
+try:
+    sets = int(input("How many sets did you complete? "))
+    print("Congratulations, you completed " + str(sets))
+except:
+    print("Error: Please type a real number using digits (like 500)!")
+
+Master Project: Automated Content Logger
+
+class VideoIdea:
+    def __init__(self, topic):
+        self.topic = topic
+
+    def log_idea(self):
+        with open("content_calendar.txt", "a") as file:
+            file.write(self.topic + "\n")
+
+try:
+    content = input("What is the new video topic? ")
+    
+    if content == "":
+        raise ValueError("Topic cannot be empty!")
+    else:
+        new_video = VideoIdea(content)
+        new_video.log_idea()
+        print("Topic saved successfully!")
+
+except ValueError as e:
+    print("Error: " + str(e))
