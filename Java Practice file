@@ -1,0 +1,43 @@
+Interactive Java Workout Routine
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        workoutRoutine();
+    }
+
+    public static void workoutRoutine() {
+        // Data type added to the array
+        String[] exercises = {"Push-ups", "Squats", "Plank"};
+        
+        // Loop prints all exercises first
+        for (String exercise : exercises) {
+            System.out.println(exercise);
+        }
+        
+        // Scanner and question placed outside the loop
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Did you finish the workout? (yes/no): ");
+        String status = scanner.nextLine();
+        
+        if (status.equals("yes")) {
+            System.out.println("Congratulations you Nailed it!");
+        } else {
+            System.out.println("You are not going to end here");
+        }
+    }
+}
+
+Intermediate Error Handling (Java)
+
+class Main {
+    public static void main(String[] args) {
+        try {
+            int sets = Integer.parseInt("Five");
+            System.out.println("Sets Completed " + sets);
+        } catch (Exception e) {
+            System.out.println("Error: Use Digits!");
+        }
+    }
+}
