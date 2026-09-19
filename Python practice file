@@ -34,7 +34,7 @@ try:
 except:
     print("Error: Please type a real number using digits (like 500)!")
 
-Master Project: Automated Content Logger
+Master Project: Automated Content Logger (Multithreading & Error Handling)
 
 class VideoIdea:
     def __init__(self, topic):
